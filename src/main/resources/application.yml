@@ -1,0 +1,30 @@
+#服务端容器的配置
+server:
+  port: 8080
+
+
+#数据库配置
+spring:
+  datasource:
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.106.216.132:3306/istock?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    # formatSQL得这样写
+    properties:
+      hibernate:
+        format_sql: true
+
+istock:
+  xueqiu:
+    token: 5671c2089dda1656f2122da9c1e156abcef5264f
+  eastmoney:
+    token: e1fc716525030b5517f9968fe65eb25d
+  tushare:
+    token: ff6a6ce255d7040de8c47f833fdbf6880cf093cc790900383232e274
